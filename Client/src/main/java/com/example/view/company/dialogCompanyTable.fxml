@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import java.net.URL?>
+<AnchorPane prefHeight="571.0" prefWidth="833.0" xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/2.2"
+            fx:controller="com.example.controller.company.DialogCompaniesTableController">
+    <children>
+        <BorderPane layoutX="0.0" layoutY="0.0" prefHeight="560.0" prefWidth="826.0">
+            <bottom>
+                <HBox prefHeight="85.0" prefWidth="785.0">
+                    <children>
+                        <Button defaultButton="true" mnemonicParsing="false" onAction="#save" text="сохранить">
+                            <HBox.margin>
+                                <Insets left="350.0" top="25.0"/>
+                            </HBox.margin>
+                        </Button>
+                        <Button cancelButton="true" mnemonicParsing="false" onAction="#actionClose" text="назад">
+                            <HBox.margin>
+                                <Insets left="100.0" top="25.0"/>
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                </HBox>
+            </bottom>
+            <center>
+                <VBox prefHeight="200.0" prefWidth="100.0">
+                    <children>
+                        <VBox prefHeight="177.0" prefWidth="399.5">
+                            <children>
+                                <Label text="Страна">
+                                    <VBox.margin>
+                                        <Insets top="5.0"/>
+                                    </VBox.margin>
+                                </Label>
+                                <TextField fx:id="textCountry" prefWidth="200.0">
+                                    <VBox.margin>
+                                        <Insets left="10.0" right="10.0" top="25.0" fx:id="x1"/>
+                                    </VBox.margin>
+                                </TextField>
+                            </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                            <children>
+                                <Label text="Расходы по налогу на прибыль">
+                                    <VBox.margin>
+                                        <Insets top="15.0"/>
+                                    </VBox.margin>
+                                </Label>
+                                <TextField fx:id="textIncomeTax" prefWidth="200.0">
+                                    <VBox.margin>
+                                        <Insets left="10.0" right="10.0" top="20.0" fx:id="x3"/>
+                                    </VBox.margin>
+                                </TextField>
+                            </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                            <children>
+                                <Label text="Мультипликатор EBITDA">
+                                    <VBox.margin>
+                                        <Insets left="10.0" top="5.0" fx:id="x2"/>
+                                    </VBox.margin>
+                                </Label>
+                                <TextField fx:id="textEbitda" prefWidth="200.0" VBox.margin="$x1"/>
+                            </children>
+                        </VBox>
+                    </children>
+                </VBox>
+            </center>
+            <left>
+                <VBox prefHeight="529.0" prefWidth="274.0">
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                            <children>
+                                <Label text="Название компании" VBox.margin="$x2"/>
+                                <TextField fx:id="textName" prefWidth="200.0" VBox.margin="$x1"/>
+                            </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                            <children>
+                                <Label text="Выручка">
+                                    <VBox.margin>
+                                        <Insets left="15.0"/>
+                                    </VBox.margin>
+                                </Label>
+                                <TextField fx:id="textSuccor" prefWidth="200.0" VBox.margin="$x3"/>
+                            </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                            <children>
+                                <Label text="Амортизация">
+                                    <VBox.margin>
+                                        <Insets left="10.0"/>
+                                    </VBox.margin>
+                                </Label>
+                                <TextField fx:id="textDepreciation" prefWidth="200.0" VBox.margin="$x1"/>
+                            </children>
+                        </VBox>
+                    </children>
+                </VBox>
+            </left>
+            <right>
+                <VBox prefHeight="529.0" prefWidth="283.0">
+                    <children>
+                        <VBox prefHeight="127.0" prefWidth="283.0">
+                            <children>
+                                <Label text="Сегмент работы" VBox.margin="$x2"/>
+                                <ChoiceBox fx:id="choiceSegment" prefWidth="202.0">
+                                    <items>
+                                        <FXCollections fx:factory="observableArrayList">
+                                            <String fx:value="Item 1"/>
+                                            <String fx:value="Item 2"/>
+                                            <String fx:value="Item 3"/>
+                                        </FXCollections>
+                                    </items>
+                                    <VBox.margin>
+                                        <Insets left="10.0" top="25.0"/>
+                                    </VBox.margin>
+                                </ChoiceBox>
+                            </children>
+                        </VBox>
+                        <VBox prefHeight="150.0" prefWidth="283.0">
+                            <children>
+                                <Label text="Итогая финансовая прибыль">
+                                    <VBox.margin>
+                                        <Insets left="10.0" top="15.0"/>
+                                    </VBox.margin>
+                                </Label>
+                                <TextField fx:id="textFinancialIncome" prefWidth="200.0" VBox.margin="$x3"/>
+                            </children>
+                        </VBox>
+                        <VBox prefHeight="150.0" prefWidth="283.0">
+                            <children>
+                                <Label text="Оценка" VBox.margin="$x2"/>
+                                <ChoiceBox fx:id="choiceMark" prefWidth="216.0">
+                                    <items>
+                                        <FXCollections fx:factory="observableArrayList">
+                                            <String fx:value="Item 1"/>
+                                            <String fx:value="Item 2"/>
+                                            <String fx:value="Item 3"/>
+                                        </FXCollections>
+                                    </items>
+                                    <VBox.margin>
+                                        <Insets left="15.0" top="20.0"/>
+                                    </VBox.margin>
+                                </ChoiceBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </VBox>
+            </right>
+            <top>
+                <HBox prefHeight="48.0" prefWidth="785.0">
+                    <children>
+                        <Label prefWidth="324.0" text="Работа с компанией">
+                            <HBox.margin>
+                                <Insets left="150.0" top="10.0"/>
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                </HBox>
+            </top>
+        </BorderPane>
+    </children>
+    <stylesheets>
+        <URL value="@../new_theme.css"/>
+    </stylesheets>
+</AnchorPane>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<AnchorPane prefHeight="522.0000999999975" prefWidth="823.0" xmlns="http://javafx.com/javafx/19"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.controller.user.UserPersonalCabinetController">
+    <children>
+        <BorderPane layoutX="14.0" layoutY="14.0" prefHeight="475.0" prefWidth="795.0">
+            <center>
+                <BorderPane prefHeight="200.0" prefWidth="200.0">
+                    <bottom>
+                        <HBox prefHeight="50.0" prefWidth="555.0">
+                            <children>
+                                <Button id="update" mnemonicParsing="false" onAction="#update" prefHeight="43.0"
+                                        prefWidth="235.0" text="Изменить">
+                                    <HBox.margin>
+                                        <Insets left="15.0" top="5.0"/>
+                                    </HBox.margin>
+                                </Button>
+                                <Button mnemonicParsing="false" onAction="#exit" prefHeight="43.0" prefWidth="204.0"
+                                        text="Выйти">
+                                    <HBox.margin>
+                                        <Insets left="150.0" right="15.0" top="5.0"/>
+                                    </HBox.margin>
+                                </Button>
+                            </children>
+                        </HBox>
+                    </bottom>
+                    <center>
+                        <VBox prefHeight="298.0" prefWidth="333.0">
+                            <children>
+                                <TextField fx:id="textLogin" prefWidth="200.0">
+                                    <VBox.margin>
+                                        <Insets top="20.0"/>
+                                    </VBox.margin>
+                                </TextField>
+                                <TextField fx:id="textName" prefWidth="200.0">
+                                    <VBox.margin>
+                                        <Insets top="25.0" fx:id="x1"/>
+                                    </VBox.margin>
+                                </TextField>
+                                <TextField fx:id="textSurname" prefWidth="200.0" VBox.margin="$x1"/>
+                                <TextField fx:id="textPhone" prefWidth="200.0" VBox.margin="$x1"/>
+                            </children>
+                        </VBox>
+                    </center>
+                    <left>
+                        <VBox prefHeight="325.0" prefWidth="141.0">
+                            <children>
+                                <Label text="Логин">
+                                    <VBox.margin>
+                                        <Insets left="15.0" top="25.0"/>
+                                    </VBox.margin>
+                                </Label>
+                                <Label text="Имя">
+                                    <VBox.margin>
+                                        <Insets left="15.0" top="40.0" fx:id="x2"/>
+                                    </VBox.margin>
+                                </Label>
+                                <Label text="Фамилия">
+                                    <VBox.margin>
+                                        <Insets left="15.0" top="30.0"/>
+                                    </VBox.margin>
+                                </Label>
+                                <Label text="Телефон" VBox.margin="$x2"/>
+                            </children>
+                        </VBox>
+                    </left>
+                </BorderPane>
+            </center>
+            <left>
+                <VBox prefHeight="375.0" prefWidth="321.0">
+                    <children>
+                        <Label text="Меню">
+                            <VBox.margin>
+                                <Insets left="110.0" top="20.0"/>
+                            </VBox.margin>
+                        </Label>
+                        <Button fx:id="btnCompaniesTable" mnemonicParsing="false" onAction="#showCompaniesTable"
+                                prefWidth="280.0" text="Таблица компаний">
+                            <VBox.margin>
+                                <Insets left="10.0" top="20.0" fx:id="x5"/>
+                            </VBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#updatePassword" prefWidth="280.0"
+                                text="Изменить пароль">
+                            <VBox.margin>
+                                <Insets left="10.0" top="30.0" fx:id="x3"/>
+                            </VBox.margin>
+                        </Button>
+                        <Button fx:id="btnUsersTable" mnemonicParsing="false" onAction="#showUsersStable"
+                                prefWidth="280.0" text="Таблица пользователей">
+                            <VBox.margin>
+                                <Insets left="10.0" top="30.0" fx:id="x4"/>
+                            </VBox.margin>
+                        </Button>
+                        <Button fx:id="btnSegmentsTable" mnemonicParsing="false" onAction="#showSegmentsTable"
+                                prefWidth="280.0" text="Таблица сегментов" VBox.margin="$x3"/>
+                    </children>
+                </VBox>
+            </left>
+            <top>
+                <HBox prefHeight="50.0" prefWidth="706.0">
+                    <children>
+                        <Label prefWidth="292.0" text="Личный кабинет">
+                            <HBox.margin>
+                                <Insets left="230.0"/>
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                </HBox>
+            </top>
+        </BorderPane>
+    </children>
+    <stylesheets>
+        <URL value="@../new_theme.css"/>
+    </stylesheets>
+</AnchorPane>

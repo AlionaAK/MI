@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import java.net.URL?>
+<AnchorPane prefHeight="225.0" prefWidth="600.0000999999975" xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.controller.segment.DialogSegmentTableController">
+    <children>
+        <BorderPane layoutX="14.0" layoutY="14.0" prefHeight="197.0" prefWidth="562.0">
+            <bottom>
+                <HBox prefHeight="51.0" prefWidth="562.0">
+                    <children>
+                        <Button fx:id="btnSave" defaultButton="true" mnemonicParsing="false" onAction="#actionSave"
+                                prefHeight="34.0" prefWidth="177.0" text="сохранить" textFill="#fffbfd">
+                            <effect>
+                                <Lighting>
+                                    <bumpInput>
+                                        <Shadow/>
+                                    </bumpInput>
+                                    <light>
+                                        <javafx.scene.effect.Light.Distant/>
+                                    </light>
+                                </Lighting>
+                            </effect>
+                            <font>
+                                <Font name="System Bold Italic" size="16.0" fx:id="x2"/>
+                            </font>
+                            <HBox.margin>
+                                <Insets left="180.0"/>
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="btnCansel" cancelButton="true" font="$x2" mnemonicParsing="false"
+                                onAction="#actionClose" prefHeight="34.0" prefWidth="132.0" text="отмена"
+                                textFill="#fffbfd">
+                            <effect>
+                                <Lighting>
+                                    <bumpInput>
+                                        <Shadow/>
+                                    </bumpInput>
+                                    <light>
+                                        <javafx.scene.effect.Light.Distant/>
+                                    </light>
+                                </Lighting>
+                            </effect>
+                            <HBox.margin>
+                                <Insets left="50.0"/>
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                </HBox>
+            </bottom>
+            <center>
+                <VBox prefHeight="200.0" prefWidth="100.0">
+                    <children>
+                        <TextField fx:id="textName" prefWidth="200.0">
+                            <VBox.margin>
+                                <Insets top="20.0" fx:id="x1"/>
+                            </VBox.margin>
+                        </TextField>
+                    </children>
+                </VBox>
+            </center>
+            <left>
+                <VBox prefHeight="341.0" prefWidth="132.0">
+                    <children>
+                        <Label font="$x2" text="Имя сегмента" textFill="#fffbfd" VBox.margin="$x1"/>
+                    </children>
+                </VBox>
+            </left>
+            <top>
+                <HBox prefHeight="51.0" prefWidth="562.0">
+                    <children>
+                        <Label text="Новый сегмент рынка">
+                            <HBox.margin>
+                                <Insets left="120.0" top="10.0"/>
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                </HBox>
+            </top>
+        </BorderPane>
+    </children>
+    <effect>
+        <InnerShadow/>
+    </effect>
+    <stylesheets>
+        <URL value="@../new_theme.css"/>
+    </stylesheets>
+</AnchorPane>
